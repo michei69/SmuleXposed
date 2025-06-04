@@ -11,8 +11,8 @@ android {
         applicationId = "de.michei69.smulemod"
         minSdk = 27
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,6 +38,7 @@ android {
 dependencies {
     compileOnly("de.robv.android.xposed:api:82")
 
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.airbnb.android:paris:2.0.0")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.7.0")

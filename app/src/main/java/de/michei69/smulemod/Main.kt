@@ -9,6 +9,7 @@ import de.michei69.smulemod.mods.DisableAnalytics
 import de.michei69.smulemod.mods.DisablePermissionRequest
 import de.michei69.smulemod.mods.DisableXiaomiDiscrimination
 import de.michei69.smulemod.mods.EnableAudioSettings
+import de.michei69.smulemod.mods.FakeProfiles
 import de.michei69.smulemod.mods.FixUserProfileNull
 import de.michei69.smulemod.mods.FragmentHook
 import de.michei69.smulemod.mods.JSONHook
@@ -58,5 +59,6 @@ class Main : IXposedHookLoadPackage {
         DisableXiaomiDiscrimination.runPatch(lpparam.classLoader)
         AddModSettingsPage.runPatch(lpparam.classLoader)
         DisablePermissionRequest.runPatch(lpparam.classLoader)
+        FakeProfiles.runPatch(lpparam.classLoader)
     }
 }

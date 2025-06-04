@@ -10,11 +10,12 @@ A home-made mod for Smule
 - Enables the dark mode option on Xiaomi Devices
 - Disables the location permission request popup on startup
 - Ability to add a staff badge to your profile (local, visual only, but why not)
+- Custom fake VIP profiles (sorta like USRBG)
 
 # VIP on non-VIP accounts
 
 - Your performances will only last 3 days, instead of 7
-- Profile customization is not available (something like UserBG on discord is on the roadmap for this mod though!)
+- Profile customization is not available (the FakeProfiles mod does allow for something like USRBG does on discord)
 - You cannot re-cast your performance as a seed (invitation) once it expires
 - Everything else _probably_ works, but i havent tried all of it lol
 
