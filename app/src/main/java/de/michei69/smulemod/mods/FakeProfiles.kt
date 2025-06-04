@@ -22,22 +22,22 @@ object FakeProfiles {
         // TODO: add setting
         ModelCreationHooks.getInstance()!!.addListener { type, data ->
             if (type != "SingUserProfile") return@addListener
-            Logging.log("[FakeProfiles] ${data}")
+            //Logging.log("[FakeProfiles] ${data}")
             val accountId = getObjectField(getObjectField(getObjectField(data, "profile"), "accountIcon"), "accountId")
             Logging.log("[FakeProfiles] ${accountId}")
 
             val resp = httpClient.newCall(
                 Request.Builder()
-                    .url("https://raw.githubusercontent.com/michei69/test/refs/heads/main/$accountId.json") // TODO: allow other hosts
+                    .url("https://raw.githubusercontent.com/michei69/SmuleXposed/refs/heads/main/Profiles/$accountId.json") // TODO: allow other hosts
                     .build()
             ).execute()
             if (resp.code == 200) {
                 val content = resp.body!!.string()
-                Logging.log("[FakeProfiles] ${content}")
+                //Logging.log("[FakeProfiles] ${content}")
 
                 val obj = parseJson.invoke(null, content, profileCustomizations)
                 setObjectField(data, "singProfile", obj)
-                Logging.log("[FakeProfiles] ${obj}")
+                //Logging.log("[FakeProfiles] ${obj}")
             } else {
                 Logging.log("[FakeProfiles] No customizations for $accountId found")
             }
